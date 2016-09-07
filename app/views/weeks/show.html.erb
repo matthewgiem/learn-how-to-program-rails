@@ -1,0 +1,14 @@
+<h1><%= @week.name %></h1>
+<% @week.lessons.each do |lesson| %>
+  <h3><%= link_to lesson.title, week_lesson_path(@week, lesson)%></h3>
+<% end %>
+
+
+<p><%= link_to "Add a Lesson", new_week_lesson_path(@week) %></p>
+
+<p><%= link_to "Edit", edit_course_week_path(@course) %></p>
+<p><%= link_to "Delete", week_path(@week), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+
+
+
+<%= link_to "Return to #{@week.course.name}", course_path(@week.course) %>

@@ -1,0 +1,13 @@
+<%= render "layouts/errors", :object => @lesson %>
+
+<%= form_for [@week, @lesson] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :day %>
+  <%= f.text_field :day %>
+  <%= f.label :lesson_type %>
+  <%= f.text_field :lesson_type %>
+  <%= f.label :body %>
+  <%= f.text_area :body, size: "80x12" %>
+  <%= f.submit %>
+<% end %>

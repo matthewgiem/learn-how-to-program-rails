@@ -1,6 +1,6 @@
 <h1><%= @course.name %></h1>
 <% @course.weeks.each do |week| %>
-  <h2><%= link_to week.name, course_week_path(@course, week)%></h2>
+  <h3><%= link_to week.name, course_week_path(@course, week)%></h3>
 <% end %>
 
 
